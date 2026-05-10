@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorites</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#020617;
+            color:white;
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#38bdf8;
+            margin-bottom:50px;
+            font-size:42px;
+        }
+
+        .card-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:#111827;
+            border-radius:22px;
+            overflow:hidden;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+            font-size:26px;
+        }
+
+        .card-content p{
+            color:#cbd5e1;
+            line-height:28px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+        Favorite Restaurants ❤️
+    </h1>
+
+    <div class="card-container">
+
+        {% for fav in favorites %}
+
+        <div class="card">
+
+            <img src="{{ fav.image }}">
+
+            <div class="card-content">
+
+                <h3>
+                    {{ fav.restaurant_name }}
+                </h3>
+
+                <p>
+                    {{ fav.food }} • {{ fav.location }}
+                </p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>

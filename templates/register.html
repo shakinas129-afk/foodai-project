@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+            url('https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=1600&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+        }
+
+        .register-box{
+            width:400px;
+            background:rgba(255,255,255,0.1);
+            padding:40px;
+            border-radius:20px;
+            backdrop-filter:blur(10px);
+            color:white;
+        }
+
+        .register-box h2{
+            text-align:center;
+            margin-bottom:30px;
+            font-size:35px;
+        }
+
+        .input-box{
+            margin-bottom:20px;
+        }
+
+        .input-box input{
+            width:100%;
+            padding:15px;
+            border:none;
+            outline:none;
+            border-radius:10px;
+            font-size:16px;
+        }
+
+        .register-btn{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#38bdf8;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .register-btn:hover{
+            background:#0ea5e9;
+        }
+
+        .bottom-text{
+            margin-top:20px;
+            text-align:center;
+        }
+
+        .bottom-text a{
+            color:#38bdf8;
+            text-decoration:none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="register-box">
+
+        <h2>
+            Register
+        </h2>
+
+        <form method="POST">
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter Name"
+                    required
+                >
+
+            </div>
+
+            <div class="input-box">
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required
+                >
+
+            </div>
+
+            <div class="input-box">
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+            </div>
+
+            <button class="register-btn">
+                Register
+            </button>
+
+        </form>
+
+        <div class="bottom-text">
+
+            Already have an account?
+
+            <a href="/login">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
