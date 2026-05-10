@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 # CONNECT MONGODB
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://admin:admin123@cluster01.qmuuxio.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01")
 
 db = client["foodai_database"]
 
