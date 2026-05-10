@@ -16,7 +16,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # MONGODB
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb://admin:admin123@ac-rhm2tk6-shard-00-00.qmuuxio.mongodb.net:27017,ac-rhm2tk6-shard-00-01.qmuuxio.mongodb.net:27017,ac-rhm2tk6-shard-00-02.qmuuxio.mongodb.net:27017/?ssl=true&replicaSet=atlas-1ggbmg-shard-0&authSource=admin&appName=Cluster01")
 
 db = client["foodai_database"]
 
